@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { callClaude } from '@/lib/anthropic'
-import { supabaseAdmin } from '@/lib/supabase'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 
 const SYSTEM_PROMPT = `You are a legal risk analyst specializing in contract review.
 Identify problematic clauses, liability traps, and vague commitments in vendor proposals.

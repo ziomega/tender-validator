@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { callClaude } from '@/lib/anthropic'
-import { supabaseAdmin } from '@/lib/supabase'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 
 const SYSTEM_PROMPT = `You are a contract compliance expert. 
 Analyze vendor proposals against RFP requirements using semantic understanding.

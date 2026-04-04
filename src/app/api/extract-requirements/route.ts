@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { callClaude } from '@/lib/anthropic'
-import { supabaseAdmin } from '@/lib/supabase'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 
 const SYSTEM_PROMPT = `You are a legal and procurement expert specializing in analyzing RFP (Request for Proposal) documents. 
 Your job is to extract ALL mandatory requirements from the document.
