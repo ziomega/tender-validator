@@ -1,10 +1,11 @@
+export const runtime = "nodejs"
+
 export async function extractTextFromFile(file: File): Promise<string> {
   const arrayBuffer = await file.arrayBuffer()
   const buffer = Buffer.from(arrayBuffer)
   
   if (file.name.endsWith('.pdf')) {
-    const pdfParseModule = await import("pdf-parse")
-    const pdfParse = pdfParseModule.default || pdfParseModule
+    const pdfParse = require("pdf-parse")
 
     const data = await pdfParse(buffer)
     return data.text
